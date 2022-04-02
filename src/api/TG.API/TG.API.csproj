@@ -22,10 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TG.Core\TG.Core.csproj" />
     <ProjectReference Include="..\TG.Services\TG.Services.csproj" />
   </ItemGroup>
