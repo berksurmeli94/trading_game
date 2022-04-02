@@ -23,6 +23,7 @@ namespace TG.API.Controllers
             this.userService = userService;
         }
 
+        [HttpPost]
         public async ValueTask<ActionResult<BaseAPIResponse<string>>> Register([FromQuery] RegisterRequestModel model)
         {
             var response = new BaseAPIResponse<string>();
@@ -33,6 +34,7 @@ namespace TG.API.Controllers
             return Ok(response);
         }
 
+        [HttpPost]
         public async ValueTask<ActionResult<BaseAPIResponse<string>>> SignInWithEmail([FromQuery] SignInWithEmailRequestModel model)
         {
             var response = new BaseAPIResponse<string>();

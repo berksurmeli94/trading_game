@@ -24,6 +24,7 @@ namespace TG.API.Controllers
             this.currentUser = currentUser; 
         }
 
+        [HttpPost]
         public async ValueTask<ActionResult<BaseAPIResponse<BaseResult<List<ListShareResponseModel>>>>> List([FromQuery] ListSharesRequestModel model)
         {
             var response = new BaseAPIResponse<BaseResult<List<ListShareResponseModel>>>();
@@ -31,6 +32,7 @@ namespace TG.API.Controllers
             return Ok(response);
         }
 
+        [HttpGet]
         public async ValueTask<ActionResult<BaseAPIResponse<GetShareResponseModel>>> Detail([FromQuery] string Id)
         {
             var response = new BaseAPIResponse<GetShareResponseModel>();

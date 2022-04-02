@@ -18,7 +18,7 @@ namespace TG.Entities
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public Authority Role { get; set; } = Authority.User
+        public Authority Role { get; set; } = Authority.User;
         public decimal TotalMoney { get; set; } = 5000000000; // 5 billion
         public List<Portfolio> Portfolios { get; set; }
     }

@@ -23,6 +23,7 @@ namespace TG.API.Controllers
             this.currentUser = currentUser;
         }
 
+        [HttpPost]
         public async ValueTask<ActionResult<BaseAPIResponse<bool>>> Buy([FromQuery] BuyRequestModel model)
         {
             var response = new BaseAPIResponse<bool>();
@@ -32,6 +33,7 @@ namespace TG.API.Controllers
             return Ok(response);
         }
 
+        [HttpPost]
         public async ValueTask<ActionResult<BaseAPIResponse<bool>>> Sell([FromQuery] SellRequestModel model)
         {
             var response = new BaseAPIResponse<bool>();

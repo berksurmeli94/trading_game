@@ -21,6 +21,7 @@ namespace TG.API.Controllers
             this.currentUser = currentUser;
         }
 
+        [HttpPost]
         public async ValueTask<ActionResult<BaseAPIResponse<string>>> Create([FromQuery] PortfolioCreateRequestModel model)
         {
             var response = new BaseAPIResponse<string>();
