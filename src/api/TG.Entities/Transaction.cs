@@ -21,6 +21,7 @@ namespace TG.Entities
         [Required]
         public string ShareId { get; set; }
         public int Amount { get; set; }
+        [Range(0, Double.MaxValue)]
         public decimal Price { get; set; }
         public TransactionType TransactionType { get; set; }
     }

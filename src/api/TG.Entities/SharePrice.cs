@@ -16,6 +16,7 @@ namespace TG.Entities
         [Required]
         public string ShareId { get; set; }
         public override string Title { get; set; }
+        [Range(0, Double.MaxValue)]
         public decimal Price { get; set; }
         public Share Share { get; set; }
     }
