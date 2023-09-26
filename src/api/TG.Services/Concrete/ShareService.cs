@@ -65,7 +65,7 @@ namespace TG.Services.Concrete
                                        x.Title.ToLower().Contains(lower));
             }
 
-            var items = await temp.Take(model.Filter.Take).Skip(model.Filter.Skip).ToListAsync();
+            var items = await temp.Take(model.Filter.Take).Skip(model.Filter.Skip*model.Filter.Take).ToListAsync();
 
             var shareIds = items.Select(x => x.ID).ToList();
             var prices = await unitOfWork.sharePriceRepository.GetAllAsQueryable().Where(x => shareIds.Contains(x.ID)).ToListAsync();
